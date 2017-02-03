@@ -6,7 +6,7 @@ public class Aplicacion {
 		ListaEst listaest = new ListaEst();
 		
 		System.out.println("\nEstudiantes inscritos en la asignatura");
-		 listaest.insertar("Sergio","1712365488");
+		 listaest . Insertar ( "Sergio" ,      1712365488   ");
 		 listaest.insertar("Andres","1763255484");
 		 listaest.insertar("Luis","1712365445");
 		 listaest.insertar("Sergio","1712365488");
