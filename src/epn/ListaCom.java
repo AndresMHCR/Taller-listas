@@ -1,6 +1,6 @@
 package epn;
 
-public class ListaEst {
+public class ListaCom {
 	public Nodo inicio;
 	public int size;
 
@@ -17,6 +17,16 @@ public void insertar(String a,String b){
 		}else
 			inicio = new Nodo(a,b,inicio); 
 }
+public void insertar(String b){
+	if (estaVacia()) 
+		inicio = new Nodo(null,b);
+	else
+		if(seRepite(b)){
+			System.out.println("Dato repetido");
+		}else
+			inicio = new Nodo(null,b,inicio); 
+}
+
 
 public boolean seRepite(String a){
 	Nodo aux=inicio;
@@ -32,7 +42,9 @@ public boolean seRepite(String a){
 public void imprimir(){
 	Nodo aux=inicio;
 	while(aux!=null){
-		System.out.println(aux.getStr1() + " " +aux.getStr2());
+		if(aux.getStr1()!=null)
+		System.out.println(aux.getStr1() + "-" +aux.getStr2());
+		
 		aux=aux.getSiguiente();
 		}
 	}
